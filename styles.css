@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #eef2f7;
+    padding: 40px;
+    transition: 0.3s;
+}
+
+/* Container */
+.resume {
+    max-width: 900px;
+    margin: auto;
+    background: #fff;
+    padding: 35px 45px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+/* Links */
+.links a {
+    display: block;
+    text-decoration: none;
+    color: #0077ff;
+    margin-top: 5px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.links a:hover {
+    transform: translateX(5px);
+}
+
+/* Contact */
+.contact {
+    text-align: right;
+    font-size: 14px;
+}
+
+/* Sections */
+h3 {
+    margin-top: 20px;
+    margin-bottom: 8px;
+    position: relative;
+}
+
+h3::after {
+    content: "";
+    width: 40px;
+    height: 3px;
+    background: #0077ff;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+
+/* Text */
+p {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #444;
+}
+
+ul {
+    margin-left: 20px;
+}
+
+li {
+    margin-bottom: 6px;
+}
+
+/* Education */
+.education {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Projects */
+.project {
+    margin-bottom: 12px;
+}
+
+/* Dark Mode Button */
+.toggle-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #0077ff;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* DARK MODE */
+.dark-mode {
+    background: #121212;
+}
+
+.dark-mode .resume {
+    background: #1e1e1e;
+    color: #eee;
+}
+
+.dark-mode p {
+    color: #ccc;
+}
+
+.dark-mode h3::after {
+    background: #00c3ff;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .header {
+        flex-direction: column;
+    }
+
+    .contact {
+        text-align: left;
+        margin-top: 10px;
+    }
+
+    .education {
+        flex-direction: column;
+    }
+}
